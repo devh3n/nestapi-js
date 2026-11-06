@@ -1,0 +1,60 @@
+{
+  "name": "@devh3n/nestapi",
+  "version": "1.0.0",
+  "description": "Small, fully dynamic TypeScript/JavaScript client for the NestAPI web services",
+  "keywords": [
+    "nestapi",
+    "api",
+    "client",
+    "fetch"
+  ],
+  "homepage": "https://nestapi.ir",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devh3n/nestapi-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devh3n/nestapi-js/issues"
+  },
+  "license": "MIT",
+  "author": "Hossein Saberi <devh3n@duck.com>",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
