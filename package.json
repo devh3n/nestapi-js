@@ -1,6 +1,6 @@
 {
   "name": "@devh3n/nestapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small, fully dynamic TypeScript/JavaScript client for the NestAPI web services",
   "keywords": [
     "nestapi",
