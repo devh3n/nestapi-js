@@ -14,7 +14,7 @@ import type { NestApiOptions, ServiceMethod } from "../src/index.js";
 
 const OK =
   '{"success":true,"data":{"bmi":22.86,"input":{"age":30,"note":null},' +
-  '"items":[{"id":7}]},"meta":{"page":2},"source":{"name":"NestAPI","version":"1.0.1"}}';
+  '"items":[{"id":7}]},"meta":{"page":2},"source":{"name":"NestAPI","version":"3.0.0"}}';
 
 const ROOT = "https://open.nestapi.ir";
 
